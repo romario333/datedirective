@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html ng-app="datedirective">
+    <head>
+        <style>
+            span.date {
+                padding: 5px;
+            }
+            .ng-invalid {
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body ng-controller="TestCtrl">
+
+        <p>
+            <date ng-model="date"></date>
+        </p>
+        <p>
+            Selected date: {{date | date: 'yyyy-MM-dd'}}
+        </p>
+
+        <script src="bower_components/angular/angular.js"></script>
+
+        <script src="index.js"></script>
+        <script src="date.js"></script>
+    </body>
+</html>
